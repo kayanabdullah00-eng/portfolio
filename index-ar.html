@@ -4,13 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>كيان النزاري | ملف الأعمال </title>
+    <!-- Link to CSS File -->
+    <link rel="stylesheet" href="style.css">
+    <!-- أضيفي هذا السطر داخل الـ head لجلب الخط النحيف الأنيق -->
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
 </head>
 <body>
 
       <!-- Navigation Bar -->
   <header>
     <nav class="navbar">
-      <div class="logo">كيان.</div>
+      <div class="logo">كيان</div>
       <ul class="nav-links">
         <li><a href="#about">عني</a></li>
         <li><a href="#projects">المشاريع</a></li>
@@ -26,7 +30,7 @@
     <!-- Hero Section -->
     <section id="hero" class="hero-section">
       <div class="hero-content">
-         <h1>أهلاً، أنا <span class="highlight">كيان النزاري</span></h1>
+         <h1>أهلاً، أنا <span class="highlight">كيان النزاري</span> <span class="wave">👋</span></h1>
          <h2>مطورة واجهات أمامية ومسوقة رقمية</h2>
          <p>شغوفة بعالم الفرونت إند وتطوير الواجهات، وأجمع بين دقة البرمجة ومهاراتي في التسويق الرقمي لبناء تطبيقات ويب حديثة وعالية الأداء تُحدث أثراً وتصنع الفارق.</p>
           <div class="hero-btns">
@@ -57,8 +61,6 @@
           <li>أساسيات تسويق المنتجات</li>
         </ul>
       </div>
-    </div>
-  </section>
 
    <div class="skill-category">
           <h3>المهارات التقنية والبرمجية</h3>
@@ -70,6 +72,111 @@
           </ul>
      </div>
 
+     <!-- قسم الشهادات -->
+<section id="certifications" class="certifications-section">
+  <h2 class="section-title">الشهادات</h2>
+
+  <div class="certifications-container">
+
+    <!-- بطاقة 1: الذكاء الاصطناعي -->
+    <div class="cert-card cert-bg-ai">
+      <div class="cert-header">
+        <span class="cert-icon">🤖</span>
+        <span class="cert-badge">الذكاء الاصطناعي والتقنية</span>
+      </div>
+      <h3>Agentic AI Training Program</h3>
+      <p class="cert-issuer">Saudi Digital Academy (SDA) & atomcamp</p>
+      <div class="cert-achievement">
+        🏆 المركز الثالث وجائزة الابتكار وأفضل عرض مباشر (مشروع دليلَك)
+      </div>
+      <a href="images/IMG_5181.jpg" target="_blank" class="cert-link">
+    معاينة الشهادة 🖼️
+</a>
+    </div>
+
+    <!-- بطاقة 2: التسويق الرقمي -->
+    <div class="cert-card cert-bg-mkt">
+      <div class="cert-header">
+        <span class="cert-icon">📊</span>
+        <span class="cert-badge">التسويق الرقمي</span>
+      </div>
+      <h3>Google Digital Marketing & E-commerce</h3>
+      <p class="cert-issuer">Coursera / Google </p>
+      <div class="cert-skills">
+        <span>SEO & SEM</span>
+        <span>E-commerce</span>
+        <span>Social Media</span>
+      </div>
+      <a href="https://www.coursera.org/account/accomplishments/professional-cert/BPL5SW4M52NI?utm_source=link&utm_medium=certificate&utm_content=cert_image&utm_campaign=sharing_cta&utm_product=prof" target="_blank" class="cert-link">عرض الشهادة ←</a>
+    </div>
+
+    <!-- بطاقة 3: المهارات القيادية -->
+    <div class="cert-card cert-bg-lead">
+      <div class="cert-header">
+        <span class="cert-icon">💡</span>
+        <span class="cert-badge">القيادة وحل المشكلات</span>
+      </div>
+      <h3>McKinsey Forward Program</h3>
+      <p class="cert-issuer">McKinsey & Company</p>
+      <p class="cert-desc">التركيز على حل المشكلات الهيكلية، التواصل الفعال، والمرونة المؤسسية.</p>
+      <a href="https://www.credly.com/badges/f92e84d6-7c69-42b5-973d-ad02d2890a1c/public_url" target="_blank" class="cert-link">عرض الشهادة ←</a>
+    </div>
+
+  </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+     <section id="projects" class="projects-section">
+  <h2 class="section-title">المشاريع</h2>
+  
+  <div class="projects-grid">
+    
+    <!-- كارت المشروع على شكل مجلد -->
+    <details class="folder-card">
+      <summary class="folder-header">
+        <div class="folder-shape">
+          <!-- غيري رابط الصورة لصورة مشروعك -->
+          <img src="project-image.jpg" alt="صورة المشروع" class="folder-image">
+          <div class="folder-title-overlay">
+            <h3>اسم المشروع</h3>
+            <span>اضغط لعرض التفاصيل ▾</span>
+          </div>
+        </div>
+      </summary>
+      
+      <!-- التفاصيل التي تظهر عند الضغط -->
+      <div class="folder-details">
+        <p>وصف مختصر للمشروع والتفاصيل التقنية والتسويقية الخاصة به.</p>
+        <div class="project-tags">
+          <span>HTML/CSS</span>
+          <span>Marketing</span>
+        </div>
+        <a href="#" class="project-btn">رابط المشروع ←</a>
+      </div>
+    </details>
+
+  </div>
+</section>
          
         
 
