@@ -404,6 +404,20 @@ body {
     padding: 20px;
 }
 
+.projects-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  direction: rtl;
+}
+
+.folder-card {
+  flex: 1 1 300px; /* العرض الأدنى للبطاقة 300px وستترتب بجانب بعضها تلقائياً */
+  max-width: 100%;
+}
+
+
 /* إلغاء سهم HTML الافتراضي */
 .folder-card summary::-webkit-details-marker {
     display: none;
@@ -422,27 +436,61 @@ body {
     transform: translateY(-8px);
 }
 
-/* شكل المجلد مع البروز العلوي (Folder Shape) */
+/* خلفية لوجو دليلك داخل تفاصيل البطاقة */
+.daleelak-card .folder-details {
+  position: relative;
+  background-image: url('daleelak-logo.png'); /* مسار صورة اللوجو */
+  background-repeat: no-repeat;
+  background-position: center; /* وضع اللوجو في منتصف البطاقة */
+  background-size: 120px auto; /* التحكم في حجم اللوجو */
+  background-blend-mode: overlay; /* لدمج اللوجو بشكل ناعم مع الخلفية */
+}
+
+/* إضافة طبقة شفافية خفيفة للوجو لكي لا يغطي على النص */
+.daleelak-card .folder-details::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(255, 255, 255, 0.85); /* الشفافية (غيريها حسب نمط الموقع فاتح/داكن) */
+  z-index: 1;
+}
+
+/* لضمان ظهور النصوص والأزرار فوق اللوجو ووضوحها */
+.daleelak-card .folder-details * {
+  position: relative;
+  z-index: 2;
+}
+
 .folder-shape {
     position: relative;
     width: 100%;
     height: 250px;
-    background-color: #ff7675; /* لون خفية المجلد/البروز العلوي (وردي أو أومبريه) */
     border-radius: 18px;
-    /* رسم قطع المجلد العلوي */
+    /* رسم قطع المجلد العلوي (الشكل + اللسان في نفس القصّة) */
     clip-path: polygon(
-        0% 0%, 
-        38% 0%, 
-        48% 12px, 
-        100% 12px, 
-        100% 100%, 
+        0% 0%,
+        38% 0%,
+        48% 12px,
+        100% 12px,
+        100% 100%,
         0% 100%
     );
-    padding-top: 12px; /* مسافة للبروز العلوي */
-    overflow: hidden;
-    box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+    transition: transform 0.25s ease;
 }
 
+
+/* لون كل مشروع لحاله — نفس العنصر يلوّن كامل، مو لسان منفصل */
+.daleelak-folder {
+    background-color: #0b253a;
+}
+
+.holberton-folder {
+    background-color: #E10000;
+}
+   
 /* صورة المشروع داخل المجلد */
 .folder-image {
     width: 100%;
